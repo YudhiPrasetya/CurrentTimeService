@@ -12,6 +12,10 @@ app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow));
 
 //Get Now
 app.MapGet("time/now", () => Results.Ok(DateTime.Now));
+
+//Get Month
+app.MapGet("date/getMonth", () => Results.Ok(DateTime.Now.Month));
+
 //Run async
 await app.RunAsync();
 
