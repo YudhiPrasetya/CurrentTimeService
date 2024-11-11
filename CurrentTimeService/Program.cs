@@ -10,6 +10,8 @@ var app = builder.Build();
 //Get UTC
 app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow));
 
+//Get Now
+app.MapGet("time/now", () => Results.Ok(DateTime.Now));
 //Run async
 await app.RunAsync();
 
