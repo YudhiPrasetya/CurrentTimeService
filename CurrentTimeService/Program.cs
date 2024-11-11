@@ -6,6 +6,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+//Get UTC
 app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow));
 await app.RunAsync();
 
