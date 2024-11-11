@@ -9,5 +9,7 @@ var app = builder.Build();
 
 //Get UTC
 app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow));
+
+//Run async
 await app.RunAsync();
 
