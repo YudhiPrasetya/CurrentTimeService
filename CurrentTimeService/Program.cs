@@ -16,6 +16,9 @@ app.MapGet("time/now", () => Results.Ok(DateTime.Now));
 //Get Month
 app.MapGet("date/getMonth", () => Results.Ok(DateTime.Now.Month));
 
+//Get Year
+app.MapGet("date/getYear", () => Results.Ok(DateTime.Now.Year));
+
 //Run async
 await app.RunAsync();
 
